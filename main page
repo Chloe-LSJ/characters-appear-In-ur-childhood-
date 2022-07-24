@@ -1,1 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+  xmlns:svg="http://www.w3.org/2000/svg">
+<head>
+	<title>Welcome To Ruined My Childhood</title>
+</head>
+<body>
 
+<body background="https://wx2.sinaimg.cn/mw2000/006UZca4ly1h4eiuz2lbgg30jg0jgk5a.gif";>
+
+<body onLoad= alert("YOUR CHILDHOOD ANIMATION WILL BE DESTROYED BY ME HEHEHE!!")>
+
+
+<svg  xmlns="http://www.w3.org/2000/svg" width="1850" height="900">
+  <ellipse cx="950" cy="510" rx="780" ry="250" 
+  style="fill:black"/>
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <text x="470" y="560" fill="red" font-size="280" font-family="Times New Roman" font-style="italic" stroke="#009FFD" stroke-width="5">Welcome</text>
+</svg>
+	<defs>
+		<path id="circle1" d="M160,465 A572,330 0 1,1 1750,1050" stroke="red"></path>
+	</defs>
+	
+   <text x="250" y="470" fill="red" font-size="118" text-anchor="middle">
+     <textPath xlink:href="#circle1" startOffset="25%">
+     <tspan dx="0 4 -3 5 -3 3 1 4 0 -4 6 -2 -1 3 5 2 1" dy="2 4 7 3 11 14 2 12 0 -8 5 3 -2 -5 -9 -8 -15"
+				   rotate="5 10 -5 -20 0 15 5 10 -5 -25 7 14 15 27 -12 19 -5">		   
+				   RUINED MY CHILDHOOD</tspan></textPath>
+   </text>
+
+	<text x="635" y="880" fill="red" font-family="Times New Roman" font-size="178">
+		Tooooooo</text>
+
+<p> <marquee behavior="alternate"><marquee width="125" direction=right>Stay with me...Don't go...plzppplzllzz</marquee></p>
+
+<a href="file:///C:/Users/Chloe%20Li/Desktop/SpongeBob%20SquarePants.html" target="_blank">SpongeBob SquarePants</a>
+
+<!--防复制-->        
+<body leftmargin="2" topmargin="0" marginwidth="0" marginheight="0" oncontextmenu="return false" ondragstart="return false" onselectstart ="return false" onselect="document.selection.empty()" oncopy="document.selection.empty()" onbeforecopy="return false" onmouseup="document.selection.empty()">
+<noscript><iframe src="/blog/*>";</iframe></noscript>
+
+
+</body>
+</html>
