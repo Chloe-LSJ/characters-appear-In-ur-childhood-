@@ -36,10 +36,6 @@
 
 <a href="file:///C:/Users/Chloe%20Li/Desktop/SpongeBob%20SquarePants.html" target="_blank">SpongeBob SquarePants</a>
 
-<!--防复制-->        
-<body leftmargin="2" topmargin="0" marginwidth="0" marginheight="0" oncontextmenu="return false" ondragstart="return false" onselectstart ="return false" onselect="document.selection.empty()" oncopy="document.selection.empty()" onbeforecopy="return false" onmouseup="document.selection.empty()">
-<noscript><iframe src="/blog/*>";</iframe></noscript>
-
 
 </body>
 </html>
