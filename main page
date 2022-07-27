@@ -1,41 +1,157 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" 
-  xmlns:svg="http://www.w3.org/2000/svg">
+<html lang="en">
+
 <head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Welcome To Ruined My Childhood</title>
+
+
+    <style>
+        body {
+            height: 2000px;
+        }
+        img {
+            position: absolute;
+            padding: 10px 0;
+            border: 0px solid #ccc;
+            cursor: pointer;
+            background-color:;
+        }
+    </style>
+
+
 </head>
 <body>
 
+<style>
+	body{
+		overflow-x:auto; 
+		overflow-y:auto;
+	}
+</style>
+
 <body background="https://wx2.sinaimg.cn/mw2000/006UZca4ly1h4eiuz2lbgg30jg0jgk5a.gif";>
 
-<body onLoad= alert("YOUR CHILDHOOD ANIMATION WILL BE DESTROYED BY ME HEHEHE!!")>
+<div style="color: red;
+	 font-size: 10px; 
+	 x=1000; 
+	 y=750;">YOUR CHILDHOOD ANIMATION WILL BE DESTROYED BY ME HEHEHEHEHEHehehehehehhhheeee!!
+</div>
 
-
-<svg  xmlns="http://www.w3.org/2000/svg" width="1850" height="900">
-  <ellipse cx="950" cy="510" rx="780" ry="250" 
-  style="fill:black"/>
+<svg  xmlns="http://www.w3.org/2000/svg" width="1850" height="1500">
+	<ellipse cx="950" 
+	            cy="510" 
+	            rx="780" 
+	            ry="250" 
+	style="fill:black"/>
 
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-  <text x="470" y="560" fill="red" font-size="280" font-family="Times New Roman" font-style="italic" stroke="#009FFD" stroke-width="5">Welcome</text>
+	<text x="470" 
+	        y="560" 
+	        fill="red" 
+	        font-size="280" 
+	        font-family="Times New Roman" 
+	        font-style="italic" 
+	        stroke="#009FFD" 
+	        stroke-width="5">Welcome
+	</text>
 </svg>
 	<defs>
-		<path id="circle1" d="M160,465 A572,330 0 1,1 1750,1050" stroke="red"></path>
+		<path id="circle1" 
+		         d="M160,465 A572,330 0 1,1 1750,1050" 
+		         stroke="red">
+		</path>
 	</defs>
 	
-   <text x="250" y="470" fill="red" font-size="118" text-anchor="middle">
-     <textPath xlink:href="#circle1" startOffset="25%">
-     <tspan dx="0 4 -3 5 -3 3 1 4 0 -4 6 -2 -1 3 5 2 1" dy="2 4 7 3 11 14 2 12 0 -8 5 3 -2 -5 -9 -8 -15"
-				   rotate="5 10 -5 -20 0 15 5 10 -5 -25 7 14 15 27 -12 19 -5">		   
-				   RUINED MY CHILDHOOD</tspan></textPath>
-   </text>
+<text x="250" 
+        y="470" 
+        fill="red" 
+        font-size="118" 
+        text-anchor="middle">
+     	<textPath xlink:href="#circle1" 
+	               startOffset="25%">
+     	<tspan dx="0 4 -3 5 -3 3 1 4 0 -4 6 -2 -1 3 5 2 1" 
+	           dy="2 4 7 3 11 14 2 12 0 -8 5 3 -2 -5 -9 -8 -15"
+	           		rotate="5 10 -5 -20 0 15 5 10 -5 -25 7 14 15 27 -12 19 -5">		   
+			RUINED MY CHILDHOOD</tspan></textPath>
+</text>
 
-	<text x="635" y="880" fill="red" font-family="Times New Roman" font-size="178">
-		Tooooooo</text>
+<text x="635" 
+        y="880" 
+        fill="red" 
+        font-family="Times New Roman" 
+        font-size="178">
+		Tooooooo
+</text>
+
+<img src="https://tse2-mm.cn.bing.net/th/id/OIP-C.hqu-vHg4AjGW0o1oQSXHcAHaHa?pid=ImgDet&rs=1"; 
+        width=70px; 
+        height=70px; 
+        verflow=hidden;/>
+
+<script>
+    //  mouce place= part that rolled into+visual part
+    var img = document.getElementsByTagName("img")[0];
+    var timer = null;
+    var targetx = 0;
+    var targety = 0;
+    var leaderx = 0;
+    var leadery = 0;
+
+    //place of mouse
+    document.onclick = function (event) {
+        event = event || window.event;
+        var pagey = event.pageY || scroll().top + event.clientY;
+        var pagex = event.pageX || scroll().left + event.clientX;
+        targety = pagey - 30;
+        targetx = pagex - 50;
+
+        //timer
+        clearInterval(timer);
+        timer = setInterval(function () {
+
+            //place value
+            leaderx = img.offsetLeft;
+
+            //len of step
+            var stepx = (targetx - leaderx) / 10;
+
+            //2nd len of step
+            stepx = stepx > 0 ? Math.ceil(stepx) : Math.floor(stepx);
+            leaderx = leaderx + stepx;
+
+            //value
+            img.style.left = leaderx + "px";
+
+            //place value of box
+            leadery = img.offsetTop;
+
+            //get len of step
+            var stepy = (targety - leadery) / 10;
+
+            //2nd len of step
+            stepy = stepy > 0 ? Math.ceil(stepy) : Math.floor(stepy);
+            leadery = leadery + stepy;
+
+            //value
+            img.style.top = leadery + "px";
+
+            //clean timer
+            if (Math.abs(targety - img.offsetTop) <= Math.abs(stepy) && Math.abs(targetx - img.offsetLeft) <= Math.abs(stepx)) {
+                img.style.top = targety + "px";
+                img.style.left = targetx + "px";
+                clearInterval(timer);
+            }
+        }, 30);
+    }
+</script>
+
+
+<a href="javascript:void(0)" onMouseDown="alert('NONONO')"></a>
 
 <p> <marquee behavior="alternate"><marquee width="125" direction=right>Stay with me...Don't go...plzppplzllzz</marquee></p>
 
 <a href="file:///C:/Users/Chloe%20Li/Desktop/SpongeBob%20SquarePants.html" target="_blank">SpongeBob SquarePants</a>
-
-
 </body>
 </html>
