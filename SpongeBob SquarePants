@@ -1,17 +1,196 @@
 <!DOCTYPE html>
 <head>
+	<meta charset = "utf-8" />
+	<meta name = "viewport" content = "width = device-width, initial-scale = 1">
 	<title>SpongeBob SquarePants' World</title>
+
+<style type = "text/css">
+	* {
+    		margin: 1;
+    		padding: 1;
+   	}
+
+   	div {
+    		position: relative;
+    		margin: 25px;
+    		width: 1000px;
+    		height: 550px;
+    		border: 2px solid green;
+		background: rgba(30, 200, 200, 0.899)
+    		/* overflow: hidden; */
+   	}
+
+   	ol {
+    		position: absolute;
+   	}
+
+   	li {
+    		font-size: 20px;
+    		height: 55px;
+    		list-style: none;
+    		line-height: 70px;
+		background: yellow;
+   	}
+
+   	li:nth-child(2n) {
+    		background: pink;
+   	}
+
+   	li.demo{
+    		color: blue;
+    		font-size: 20px;
+   	}
+  </style>
+
 </head>
 <body>
-<body background="https://wx4.sinaimg.cn/mw2000/006UZca4ly1h40e85qbmzg30bs0cwdmp.gif";>
+<body background = "https://wx4.sinaimg.cn/mw2000/006UZca4ly1h40e85qbmzg30bs0cwdmp.gif";>
 
-<a href="file:///C:/Users/Chloe%20Li/Desktop/Patrick%20Star.html" target="_blank">Patrick Star</a>
+<style>
+	body{
+		overflow-x:auto; 
+		overflow-y:auto;
+	}
+</style>
+	<div id = "box">
+		<p>
+   		<ol>
+    			<li class = "demo">SpongeBob is an optimistic person.</li>
+			<li>He can always find a solution to anything, at least in the eyes of others.</li>
+    			<li>Only SpongeBob himself knows that he started taking DRUGS recently, or maybe a long time ago?</li>
+    			<li>He broke hands on the index, which year it was, but he hid it well.</li>
+    			<li>SpongeBob's head fell on the table before he could count it clearly, like a pool of dead bodies.</li>
+   		</ol>
+		</p>
+		
+		<p>
+		<ol>
+    			<li class = "demo">"HMM... DRUG ADDICTION again"</li>
+    			<li>He licked his already loose teeth and stood up to get his bag.</li>
+    			<li>At this time, it was all dark outside.</li>
+    			<li>SpongeBob looked at himself in the mirror.</li>
+			<li>His eyes were red and purple, but his eyes were more hallucinations at this time.</li>
+    			<li>He saw his real self through the illusion.</li>
+    			<li>"NO... NO! NO ONE WILL KNOW, NO ONE...!!"</li>
+   		</ol>
+		</p>
+	</div>
+
+	<div id = "box">
+		<p>
+		<ol>
+    			<li class = "demo">SpongeBob walked out of his home.</li>
+    			<li>At this time, there were several fish walking in the street.</li>
+    			<li>"FISH? NO...IT'S GOLD!! IT'S GOLD!!"</li>
+    			<li>"It seemed that they were going to crab roe castle?"</li>
+    			<li>"Are they going to snitch?"</li>
+    			<li>"They're going to snitch!"</li>
+			<li>"No In this way, I will lose the job I love."</li>
+			<li>"ON, THEY CANT GO... "</li>
+   		</ol>
+		</p>
+	</div>
+	
+	<div id = "box">
+		<p>
+		<ol>
+			<li class = "demo">SpongeBob took a knife out of his bag and put on his mouldy, never washed hood.</li>
+			<li>"HELP! HELP ME! PLEASE DONT DO THIS... HELP..."</li>
+			<li>He waited until they went into the alley and stabbed the knife in behind them.</li>
+    			<li>"HELP? HAHAHAHAHAHA, don't be afraid, let's have some delicious food together. "</li>
+    			<li>SpongeBob took out a medicine box from his body, picked up one randomly and fed it to the fish.</li>
+    			<li>"EAT, EAT! This is a good thing! It will make you HAPPY!"</li>
+			<li>With a few knives, SpongeBob easily stabbed the fish to death.</li>
+			<li>Then skillfully opened its stomach and put all its internal organs into its body.</li>
+   		</ol>
+		</p>
+	</div>
+
+	<div id = "box">
+		<p>
+		<ol>
+    			<li class = "demo">Then he took away all the valuables from the fish</li>
+    			<li>In the Black Sea, only SpongeBob's eyes and knife were the only lights.</li>
+    			<li>Circle after circle, the pink purple illusion appeared in his eyes again.</li>
+    			<li>SpongeBob tried to hold his head.</li>
+    			<li>While enjoying the relaxation brought by drugs, he resisted the real himself in the illusion.</li>
+			<li>"HAHA, I can</li>
+    			<li>buy medicine again!</li>
+    			<li>HAHA</li>
+    			<li>HAHAHAHA...!"</li>
+		</p>
+	</div>
+
+	<div id = "box">
+		<p>
+		<ol>
+    			<li class = "demo">"The latest report, the latest report, recently.</li>
+			<li>There is a murderer who have not been arrested to commit crimes again.!</li>
+    			<li>After the missing fish was killed, the prisoners took away their belongings</li>
+			<li>And even sold them, AH NO, not even their internal organs.</li>
+    			<li>It can be said that it is the only cooking, which is absolutely unbearable!</li>
+			<li>Next, we will turn to the channel of the on-site reporter Mr. Moss..."</li>
+   		</ol>
+		</p>
+ 	</div>
+ <script type = "text/javascript">
+   		var box = document.getElementById("box");
+   		var ol = document.getElementsByTagName("ol")[ 0 ]
+   		var li = document.getElementsByTagName("li");
+   		var speed=0;
+   		var order = true
+   		var timer = playTimer = null;
+   		var index = 0;
+   		//2s
+   		timer = setInterval(startMove,2000);
+   		function startMove( ){
+    			indexChange( );
+    		}
+
+   		function indexChange( ){
+    			order?index++: index--;
+    			if(index <= 0){
+     				index = 0;
+     				order = true;
+    		}
+    			if(index >= li.length-1){
+    				index = li.length-1;
+     				order = false
+    			}
+    			init( )
+   		}	
+   		function init( ){
+   			for(var i = 0; i < li.length; i++){
+     				li[i].className = " ";
+     				li[index].className = "demo";
+     				textMove(-index*li [index].offsetHeight);
+    			}
+   		}
+
+   		function textMove(target){
+    			clearInterval(playTimer)
+    			playTimer = setInterval(function( ){
+     				speed = (target-ol.offsetTop)/5;
+     				speed = speed>0?Math.ceil(speed):Math.floor(speed)
+     				if(target == ol.offsetHeight){
+      					clearInterval(playTimer)
+     				}else{
+     				ol.style.top = ol.offsetTop + speed + "px";
+     				}
+    			},30) 
+   		}
+  	</script> 
+
 <p>
-<a href="file:///C:/Users/Chloe%20Li/Desktop/Squirrel%20Sandy.html" target="_blank">Squirrel Sandy</a>
+	<a href="file:///C:/Users/Chloe%20Li/Desktop/Patrick%20Star.html" target="_blank">Patrick Star</a>
 </p>
 
 <p>
-<a href="file:///C:/Users/Chloe%20Li/Desktop/Squidward%20Tentacles.html" target="_blank">Squidward Tentacles SADGE</a>
+	<a href="file:///C:/Users/Chloe%20Li/Desktop/Squirrel%20Sandy.html" target="_blank">Squirrel Sandy</a>
+</p>
+
+<p>
+	<a href="file:///C:/Users/Chloe%20Li/Desktop/Squidward%20Tentacles.html" target="_blank">Squidward Tentacles SADGE</a>
 </p>
 
 
